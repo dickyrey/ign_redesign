@@ -3,7 +3,7 @@ import 'package:ign_redesign/constants.dart';
 import 'package:ign_redesign/models/game.dart';
 
 class DiscoverCard extends StatelessWidget {
-  final Game game;
+  final Game? game;
   DiscoverCard({this.game});
   @override
   Widget build(BuildContext context) {
@@ -31,14 +31,14 @@ class DiscoverCard extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15.0),
                         image: DecorationImage(
-                          image: AssetImage(game.image),
+                          image: AssetImage(game!.image!),
                           fit: BoxFit.cover,
                         ),
                       ),
                     ),
                   ),
                   SizedBox(height: 12.0),
-                  Text(game.title, style: kTitleStyle)
+                  Text(game!.title!, style: kTitleStyle)
                 ],
               ),
             ),

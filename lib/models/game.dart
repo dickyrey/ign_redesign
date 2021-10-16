@@ -1,8 +1,8 @@
 class Game {
-  final String title;
-  final String image;
-  final String rating;
-  final String platform;
+  final String? title;
+  final String? image;
+  final String? rating;
+  final String? platform;
   Game({this.image, this.platform, this.rating, this.title});
 }
 

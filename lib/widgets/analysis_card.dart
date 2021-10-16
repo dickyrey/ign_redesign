@@ -3,7 +3,7 @@ import 'package:ign_redesign/constants.dart';
 import 'package:ign_redesign/models/game.dart';
 
 class AnalysisCard extends StatelessWidget {
-  final Game game;
+  final Game? game;
   AnalysisCard({this.game});
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class AnalysisCard extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15.0),
         image: DecorationImage(
-          image: AssetImage(game.image),
+          image: AssetImage(game!.image!),
           fit: BoxFit.cover,
         ),
       ),
@@ -36,7 +36,7 @@ class AnalysisCard extends StatelessWidget {
         child: Row(
           children: [
             Text(
-              game.title,
+              game!.title!,
               overflow: TextOverflow.ellipsis,
               maxLines: 2,
               style: kTitle2Style,
@@ -51,7 +51,7 @@ class AnalysisCard extends StatelessWidget {
                 color: Colors.white38,
               ),
               child: Text(
-                game.rating,
+                game!.rating!,
                 style: kTitleStyle.copyWith(color: Colors.white),
               ),
             )

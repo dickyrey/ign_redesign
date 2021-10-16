@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ign_redesign/constants.dart';
 import 'package:ign_redesign/models/game.dart';
 import 'package:ign_redesign/widgets/analysis_card.dart';
@@ -95,7 +94,7 @@ class Home extends StatelessWidget {
 }
 
 class CategoryList extends StatelessWidget {
-  final String title;
+  final String? title;
   CategoryList({this.title});
   @override
   Widget build(BuildContext context) {
@@ -103,7 +102,7 @@ class CategoryList extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 18.0),
       child: Row(
         children: [
-          Text(title, style: kTitleStyle),
+          Text(title!, style: kTitleStyle),
           Spacer(),
           Text("View all", style: kViewAllStyle)
         ],

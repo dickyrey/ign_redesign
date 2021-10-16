@@ -3,7 +3,7 @@ import 'package:ign_redesign/constants.dart';
 import 'package:ign_redesign/models/game.dart';
 
 class TrendingCard extends StatelessWidget {
-  final Game game;
+  final Game? game;
   TrendingCard({this.game});
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class TrendingCard extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15.0),
         image: DecorationImage(
-          image: AssetImage(game.image),
+          image: AssetImage(game!.image!),
           fit: BoxFit.cover,
         ),
       ),
@@ -34,7 +34,7 @@ class TrendingCard extends StatelessWidget {
           ),
         ),
         child: Text(
-          game.title,
+          game!.title!,
           overflow: TextOverflow.ellipsis,
           maxLines: 2,
           style: kTitle2Style,
