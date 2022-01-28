@@ -59,6 +59,7 @@ class _BottomNavState extends State<BottomNav> {
         currentIndex: _selectedIndex,
         showSelectedLabels: false,
         showUnselectedLabels: false,
+        type: BottomNavigationBarType.fixed,
         items: [
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
